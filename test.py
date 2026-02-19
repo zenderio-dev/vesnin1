@@ -31,7 +31,9 @@ def test_devide_zero():
     except ValueError as e:
         print("Good")
 
-if name == "main":
+
+print("Start testing...")
+if __name__ == "main":
     test_sum()
     test_devide()
     test_devide_zero()
