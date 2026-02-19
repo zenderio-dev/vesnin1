@@ -31,8 +31,13 @@ def test_devide_zero():
     except ValueError as e:
         print("Good")
 
+def substract(a,b):
+    if isinstance(a,str) and isinstance(b,str):
+        result = a.replace(b,"")
+    else:        
+        result = a-b
+    return result
 
-print("Start testing...")
 if __name__ == "main":
     test_sum()
     test_devide()
