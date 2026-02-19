@@ -11,6 +11,17 @@ def test_devide():
     result = 0.5
     assert devide(a,b) == result
 
+
+def test_devide_prohibited():
+    try:
+        devide("A","B")
+    except:
+        print("Test string-devision fails")
+
+def test_dision_prohibited():
+    
+    return
+
 def test_devide_zero():
     a = 2
     b = 0
@@ -24,4 +35,3 @@ if name == "main":
     test_sum()
     test_devide()
     test_devide_zero()
-    
