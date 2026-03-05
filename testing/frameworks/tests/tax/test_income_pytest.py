@@ -13,3 +13,4 @@ def test_calculate_tax_integer_cents():
 ])
 def test_calculate_tax_parametrized(income, expected):
     assert calculate_tax(income) == expected
+
