@@ -2,7 +2,7 @@
 #import sys
 #sys.path.append("../src")
 # TODO make it with pip install -e
-from math_demo import add, add_with_bug
+from math_demo import add, add_with_bug, calculate_tax_bagged, calculate_tax
 
 
 def test_addition():
@@ -46,6 +46,24 @@ def test_addition_commutative():
     assert add(5, 9) == 14
     print("Test COMMUTATIVITY PASSED")
 
+def test_tax_calculator_pesticide_with_bug():
+    assert calculate_tax_bagged(1000) == 150
+    assert calculate_tax_bagged(100) == 15
+    assert calculate_tax_bagged(10) == 1.5
+    assert calculate_tax_bagged(1) == 0.15
+    assert calculate_tax_bagged(234) == 35.1 
+    print("Test TAX CALCULATOR PASSED")
+    # assert calculate_tax_bagged(2.34) == 0.35 # 0.351
+
+def test_tax_calculator_pesticide():
+    assert calculate_tax(1000) == 150
+    assert calculate_tax(100) == 15
+    assert calculate_tax(10) == 1.5
+    assert calculate_tax(1) == 0.15
+    assert calculate_tax(234) == 35.1 
+    print("Test TAX CALCULATOR PASSED")
+    # assert calculate_tax(2.34) == 0.35 # 0.351
+
 
 if __name__ == "__main__":
     test_addition()
@@ -53,4 +71,6 @@ if __name__ == "__main__":
     test_addition_dublicate()
     test_addition_clusters()
     test_addition_commutative()
+    test_tax_calculator_pesticide()
+    test_tax_calculator_pesticide_with_bug()
     # test_addition_overkill()
