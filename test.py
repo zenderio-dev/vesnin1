@@ -1,37 +1,32 @@
-from script import sum ,devide
+from script import sum, divide, mul
+
 def test_sum():
     a = 1
     b = 2
     result = 3
-    assert sum(a,b) == result
+    assert sum(a, b) == result
 
-def test_devide():
-    a = 2
-    b = 4
+def test_divide():
+    a = 4
+    b = 2
     result = 0.5
-    assert devide(a,b) == result
+    assert divide(a, b) == result
 
-
-def test_devide_prohibited():
+def test_divison_problem():
     try:
-        devide("A","B")
-    except:
-        print("Test string-devision fails")
-
-def test_dision_prohibited():
-    
-    return
-
-def test_devide_zero():
-    a = 2
-    b = 0
-    try:
-        devide(a,b)
-        assert False
+        divide("A", "B")
+        assert "Error"
     except ValueError as e:
-        print("Good")
+        print("Test fails")
 
-if name == "main":
+def test_mul():
+    a = 4
+    b = 9
+    result = 36
+    assert mul(a, b) == result
+
+if __name__ == "__main__":
+    test_divide() 
     test_sum()
-    test_devide()
-    test_devide_zero()
+    test_mul()
+    test_division_problem()

@@ -1,13 +1,15 @@
 def sum(a,b):
-    return a+b
+    return a + b
 
-def devide(a,b):
-    if isinstance(a,str) or isinstance(b,str):
-        raise ValueError("You can not divide strings!")
-    if isinstance(a,list) or isinstance(b,list):
-        raise ValueError("You can not divide lists")
-    if b!=0:
-        return a/b
-    else:
-        raise ValueError("Divisor can not be zero!")
 
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Division by zero!")
+    if isinstance(a, list) or isinstance(b, list):
+        raise ValueError("Could not divide lists")
+    if isinstance(a, list) or isinstance(b, list):
+        raise ValueError("Could not divide lists")
+    return a / b
+
+def mul(a, b):
+    return a * b
