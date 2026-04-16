@@ -61,6 +61,17 @@ def find_big(ds, t):
 
 
 def by_category(ds):
+    """parsing information for one sale
+
+    Parameters:
+        line - str that contain sale record in form of comma-separated values
+
+    Returns:
+        sale - sale information in form of dict
+
+    Raises:
+        value error
+    """
     m = {}  # category to money
     for i in ds:  # each row
         k = i["c"]  # category name
